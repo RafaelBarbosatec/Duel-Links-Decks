@@ -1,6 +1,8 @@
 # duel_links_decks
 
-A new Flutter application.
+https://www.uplabs.com/posts/trip-booking-app-dark-theme-18-screens
+
+https://www.uplabs.com/posts/subscription-ui-dark-theme-360vuz-app
 
 ## Getting Started
 
