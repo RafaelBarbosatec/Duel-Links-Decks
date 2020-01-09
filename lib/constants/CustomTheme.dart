@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class CustomTheme{
   static Color primary = colorFromHex("#07090d");
-  static Color accent = colorFromHex("#1b7cb8");
+  static Color accent = colorFromHex("#456bd8");
   static Color content = colorFromHex("#16191d");
   static Color unselected = colorFromHex("#494a4e");
 
