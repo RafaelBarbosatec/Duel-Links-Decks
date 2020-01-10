@@ -1,0 +1,50 @@
+{
+    "tier1":[
+        {
+            "name":"DARKLORDS",
+            "img":"http://www.fdsfdsfsd.com.br",
+            "last_update":"10/01/2020"
+        }
+    ],
+    "tier2":[
+        {
+            "name":"BLACKWINGS",
+            "img":"http://www.fdsfdsfsd.com.br",
+            "last_update":"10/01/2020"
+        },
+        {
+            "name":"ELEMENTSABERS",
+            "img":"http://www.fdsfdsfsd.com.br",
+            "last_update":"10/01/2020"
+        },
+        {
+            "name":"SHIRANUI",
+            "img":"http://www.fdsfdsfsd.com.br",
+            "last_update":"10/01/2020"
+        }
+    ],
+    "tier3":[
+        {
+            "name":"CYBER DRAGON",
+            "img":"http://www.fdsfdsfsd.com.br",
+            "last_update":"10/01/2020"
+        },
+        {
+            "name":"DARK MAGICIAN",
+            "img":"http://www.fdsfdsfsd.com.br",
+            "last_update":"10/01/2020"
+        },
+        {
+            "name":"RITUAL BEASTS",
+            "img":"http://www.fdsfdsfsd.com.br",
+            "last_update":"10/01/2020"
+        }
+    ],
+    "highPotential":[
+        {
+            "name":"THUNDER DRAGONS",
+            "img":"http://www.fdsfdsfsd.com.br",
+            "last_update":"10/01/2020"
+        }
+    ]
+}
