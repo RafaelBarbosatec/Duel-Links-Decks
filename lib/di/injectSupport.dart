@@ -1,6 +1,7 @@
 
 import 'package:bsev/bsev.dart';
 import 'package:bsev/flavors.dart';
+import 'package:duel_links_decks/repository/deck/DecksRepository.dart';
 import 'package:duel_links_decks/support/Con.dart';
 
 injectSupport(Injector injector){
@@ -20,5 +21,7 @@ injectSupport(Injector injector){
     return _con;
 
   });
+
+  injector.registerDependency<DecksRepository>((i)=> DeckRepositoryImpl(i.getDependency()));
 
 }

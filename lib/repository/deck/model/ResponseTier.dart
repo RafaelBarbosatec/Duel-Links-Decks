@@ -24,13 +24,13 @@ class ResponseTier {
     if (json['tier3'] != null) {
       tier3 = new List<Tier>();
       json['tier3'].forEach((v) {
-        tier3.add(new Tier3.fromJson(v));
+        tier3.add(new Tier.fromJson(v));
       });
     }
     if (json['highPotential'] != null) {
-      highPotential = new List<HighPotential>();
+      highPotential = new List<Tier>();
       json['highPotential'].forEach((v) {
-        highPotential.add(new HighPotential.fromJson(v));
+        highPotential.add(new Tier.fromJson(v));
       });
     }
   }
