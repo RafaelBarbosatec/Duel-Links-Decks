@@ -94,6 +94,14 @@ class TierListPage extends StatelessWidget {
                                         Text(response.tier1[index].lastUpdate)
                                       ],
                                     ),
+                                    Padding(
+                                      padding: EdgeInsets.only(top: 10.0),
+                                      child: RaisedButton(
+                                        onPressed: () {},
+                                        child: Text("Detalhes"),
+                                        color: Theme.of(context).accentColor,
+                                      ),
+                                    ),
                                   ],
                                 ),
                               ],
@@ -155,6 +163,14 @@ class TierListPage extends StatelessWidget {
                                     Text(response.tier2[index].lastUpdate)
                                   ],
                                 ),
+                                Padding(
+                                  padding: EdgeInsets.only(top: 10.0),
+                                  child: RaisedButton(
+                                    onPressed: () {},
+                                    child: Text("Detalhes"),
+                                    color: Theme.of(context).accentColor,
+                                  ),
+                                ),
                               ],
                             ),
                           ],
@@ -213,6 +229,14 @@ class TierListPage extends StatelessWidget {
                                     ),
                                     Text(response.tier3[index].lastUpdate)
                                   ],
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(top: 10.0),
+                                  child: RaisedButton(
+                                    onPressed: () {},
+                                    child: Text("Detalhes"),
+                                    color: Theme.of(context).accentColor,
+                                  ),
                                 ),
                               ],
                             ),
@@ -274,6 +298,14 @@ class TierListPage extends StatelessWidget {
                                     Text(response
                                         .highPotential[index].lastUpdate)
                                   ],
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(top: 10.0),
+                                  child: RaisedButton(
+                                    onPressed: () {},
+                                    child: Text("Detalhes"),
+                                    color: Theme.of(context).accentColor,
+                                  ),
                                 ),
                               ],
                             ),
