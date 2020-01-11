@@ -26,7 +26,9 @@ class MyApp extends StatelessWidget {
         backgroundColor: CustomTheme.content,
         scaffoldBackgroundColor: CustomTheme.primary,
         unselectedWidgetColor: CustomTheme.unselected,
-        textTheme: CustomTheme.myTextTheme
+        textTheme: CustomTheme.myTextTheme,
+        secondaryHeaderColor: CustomTheme.green,
+        textSelectionColor: CustomTheme.orange,
       ),
       home: Home(),
     );

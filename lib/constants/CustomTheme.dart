@@ -6,6 +6,8 @@ class CustomTheme{
   static Color accent = colorFromHex("#456bd8");
   static Color content = colorFromHex("#16191d");
   static Color unselected = colorFromHex("#494a4e");
+  static Color green = colorFromHex("#138048");
+  static Color orange = colorFromHex("#FE9635");
 
   static TextTheme myTextTheme = TextTheme(
     body1: TextStyle(
