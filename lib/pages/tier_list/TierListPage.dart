@@ -3,6 +3,7 @@ import 'package:duel_links_decks/pages/tier_list/TierListBloc.dart';
 import 'package:duel_links_decks/pages/tier_list/TierListStream.dart';
 import 'package:duel_links_decks/repository/deck/model/ResponseTier.dart';
 import 'package:duel_links_decks/repository/deck/model/Tier.dart';
+import 'package:duel_links_decks/widgets/ItemTierWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -37,283 +38,7 @@ class TierListPage extends StatelessWidget {
             padding: EdgeInsets.all(10.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Padding(
-                      padding: EdgeInsets.only(left: 10.0, bottom: 15.0),
-                      child: Text(
-                        "Tier 1",
-                        style: TextStyle(
-                          fontSize: 25.0,
-                          color: Theme.of(context).textSelectionColor,
-                        ),
-                      ),
-                    ),
-                    ListView.builder(
-                        shrinkWrap: true,
-                        itemCount: response.tier1.length,
-                        itemBuilder: (context, index) {
-                          return Container(
-                            margin: EdgeInsets.only(
-                                bottom: 10.0, left: 10.0, right: 10.0),
-                            padding: EdgeInsets.all(10.0),
-                            decoration: BoxDecoration(
-                                color: Theme.of(context).backgroundColor),
-                            child: Row(
-                              children: <Widget>[
-                                Padding(
-                                  padding: EdgeInsets.only(right: 50.0),
-                                  child: Container(
-                                    width: 80.0,
-                                    height: 80.0,
-                                    decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        image: DecorationImage(
-                                            fit: BoxFit.fill,
-                                            image: NetworkImage(
-                                                response.tier1[index].img))),
-                                  ),
-                                ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Padding(
-                                      padding: EdgeInsets.only(bottom: 10.0),
-                                      child: Text(response.tier1[index].name),
-                                    ),
-                                    Row(
-                                      children: <Widget>[
-                                        Text(
-                                          "Ultima Atualização: ",
-                                          style: TextStyle(
-                                              color: Theme.of(context)
-                                                  .secondaryHeaderColor),
-                                        ),
-                                        Text(response.tier1[index].lastUpdate)
-                                      ],
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.only(top: 10.0),
-                                      child: RaisedButton(
-                                        onPressed: () {},
-                                        child: Text("Detalhes"),
-                                        color: Theme.of(context).accentColor,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          );
-                        }),
-                  ],
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 10.0, bottom: 15.0),
-                  child: Text(
-                    "Tier 2",
-                    style: TextStyle(
-                      fontSize: 25.0,
-                      color: Theme.of(context).textSelectionColor,
-                    ),
-                  ),
-                ),
-                ListView.builder(
-                    shrinkWrap: true,
-                    itemCount: response.tier2.length,
-                    itemBuilder: (context, index) {
-                      return Container(
-                        margin: EdgeInsets.only(
-                            bottom: 10.0, left: 10.0, right: 10.0),
-                        padding: EdgeInsets.all(10.0),
-                        decoration: BoxDecoration(
-                            color: Theme.of(context).backgroundColor),
-                        child: Row(
-                          children: <Widget>[
-                            Padding(
-                              padding: EdgeInsets.only(right: 50.0),
-                              child: Container(
-                                width: 80.0,
-                                height: 80.0,
-                                decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    image: DecorationImage(
-                                        fit: BoxFit.fill,
-                                        image: NetworkImage(
-                                            response.tier2[index].img))),
-                              ),
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Padding(
-                                  padding: EdgeInsets.only(bottom: 10.0),
-                                  child: Text(response.tier2[index].name),
-                                ),
-                                Row(
-                                  children: <Widget>[
-                                    Text(
-                                      "Ultima Atualização: ",
-                                      style: TextStyle(
-                                          color: Theme.of(context)
-                                              .secondaryHeaderColor),
-                                    ),
-                                    Text(response.tier2[index].lastUpdate)
-                                  ],
-                                ),
-                                Padding(
-                                  padding: EdgeInsets.only(top: 10.0),
-                                  child: RaisedButton(
-                                    onPressed: () {},
-                                    child: Text("Detalhes"),
-                                    color: Theme.of(context).accentColor,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      );
-                    }),
-                Padding(
-                  padding: EdgeInsets.only(left: 10.0, bottom: 15.0),
-                  child: Text(
-                    "Tier 3",
-                    style: TextStyle(
-                      fontSize: 25.0,
-                      color: Theme.of(context).textSelectionColor,
-                    ),
-                  ),
-                ),
-                ListView.builder(
-                    shrinkWrap: true,
-                    itemCount: response.tier3.length,
-                    itemBuilder: (context, index) {
-                      return Container(
-                        margin: EdgeInsets.only(
-                            bottom: 10.0, left: 10.0, right: 10.0),
-                        padding: EdgeInsets.all(10.0),
-                        decoration: BoxDecoration(
-                            color: Theme.of(context).backgroundColor),
-                        child: Row(
-                          children: <Widget>[
-                            Padding(
-                              padding: EdgeInsets.only(right: 50.0),
-                              child: Container(
-                                width: 80.0,
-                                height: 80.0,
-                                decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    image: DecorationImage(
-                                        fit: BoxFit.fill,
-                                        image: NetworkImage(
-                                            response.tier3[index].img))),
-                              ),
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Padding(
-                                  padding: EdgeInsets.only(bottom: 10.0),
-                                  child: Text(response.tier3[index].name),
-                                ),
-                                Row(
-                                  children: <Widget>[
-                                    Text(
-                                      "Ultima Atualização: ",
-                                      style: TextStyle(
-                                          color: Theme.of(context)
-                                              .secondaryHeaderColor),
-                                    ),
-                                    Text(response.tier3[index].lastUpdate)
-                                  ],
-                                ),
-                                Padding(
-                                  padding: EdgeInsets.only(top: 10.0),
-                                  child: RaisedButton(
-                                    onPressed: () {},
-                                    child: Text("Detalhes"),
-                                    color: Theme.of(context).accentColor,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      );
-                    }),
-                Padding(
-                  padding: EdgeInsets.only(left: 10.0, bottom: 15.0),
-                  child: Text(
-                    "HighPotential",
-                    style: TextStyle(
-                      fontSize: 25.0,
-                      color: Theme.of(context).textSelectionColor,
-                    ),
-                  ),
-                ),
-                ListView.builder(
-                    shrinkWrap: true,
-                    itemCount: response.highPotential.length,
-                    itemBuilder: (context, index) {
-                      return Container(
-                        margin: EdgeInsets.only(
-                            bottom: 10.0, left: 10.0, right: 10.0),
-                        padding: EdgeInsets.all(10.0),
-                        decoration: BoxDecoration(
-                            color: Theme.of(context).backgroundColor),
-                        child: Row(
-                          children: <Widget>[
-                            Padding(
-                              padding: EdgeInsets.only(right: 50.0),
-                              child: Container(
-                                width: 80.0,
-                                height: 80.0,
-                                decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    image: DecorationImage(
-                                        fit: BoxFit.fill,
-                                        image: NetworkImage(response
-                                            .highPotential[index].img))),
-                              ),
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Padding(
-                                  padding: EdgeInsets.only(bottom: 10.0),
-                                  child:
-                                      Text(response.highPotential[index].name),
-                                ),
-                                Row(
-                                  children: <Widget>[
-                                    Text(
-                                      "Ultima Atualização: ",
-                                      style: TextStyle(
-                                          color: Theme.of(context)
-                                              .secondaryHeaderColor),
-                                    ),
-                                    Text(response
-                                        .highPotential[index].lastUpdate)
-                                  ],
-                                ),
-                                Padding(
-                                  padding: EdgeInsets.only(top: 10.0),
-                                  child: RaisedButton(
-                                    onPressed: () {},
-                                    child: Text("Detalhes"),
-                                    color: Theme.of(context).accentColor,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      );
-                    })
-              ],
+              children: _buildContentList(context,response),
             ),
           );
         } else {
@@ -333,6 +58,58 @@ class TierListPage extends StatelessWidget {
           return Container();
         }
       },
+    );
+  }
+
+  List<Widget> _buildContentList(BuildContext context, ResponseTier response){
+    List<Widget> list = List();
+
+    list.add(_buildCategory("Tier 1",context));
+
+    list.addAll(response.tier1.map((item){
+      return ItemTierWidget(item: item,);
+    }).toList());
+
+    list.add(_buildCategory("Tier 2",context));
+
+    list.addAll(response.tier2.map((item){
+      return ItemTierWidget(item: item,);
+    }).toList());
+
+    list.add(_buildCategory("Tier 3",context));
+
+    list.addAll(response.tier3.map((item){
+      return ItemTierWidget(item: item,);
+    }).toList());
+
+    list.add(_buildCategory("Hight Potential",context));
+
+    list.addAll(response.highPotential.map((item){
+      return ItemTierWidget(item: item,);
+    }).toList());
+
+    return list;
+
+  }
+
+  Widget _buildCategory(String text,BuildContext context) {
+    return Container(
+      width: double.maxFinite,
+      margin: EdgeInsets.only(left: 10.0,right: 10.0,bottom: 15.0),
+      padding: EdgeInsets.all(10.0),
+      decoration: BoxDecoration(
+        border:  Border.all(
+          width: 1, //
+          color: Colors.grey//                  <--- border width here
+        ),
+        borderRadius: BorderRadius.circular(10.0)
+      ),
+      child: Text(
+        text,
+        style: TextStyle(
+          fontSize: 25.0,
+        ),
+      ),
     );
   }
 }
