@@ -23,7 +23,24 @@ class TierListPage extends StatelessWidget {
   }
 
   Widget _buildBg(BuildContext context) {
-    return Container();
+    return Stack(
+      children: <Widget>[
+        Image.asset(
+          'assets/images/home.png',
+          fit: BoxFit.cover,
+          height: 1000.0,
+        ),
+        Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  stops: [0.1, 1],
+                  colors: [Colors.transparent, Colors.black])
+          ),
+        ),
+      ],
+    );
   }
 
   Widget _buildList(BuildContext context, TierListStream streams) {
@@ -100,7 +117,7 @@ class TierListPage extends StatelessWidget {
       decoration: BoxDecoration(
         border:  Border.all(
           width: 1, //
-          color: Colors.grey//                  <--- border width here
+          color: Colors.orange//                  <--- border width here
         ),
         borderRadius: BorderRadius.circular(10.0)
       ),
